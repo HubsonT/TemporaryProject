@@ -14,9 +14,11 @@ public class HelloGitHub {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+	{
         System.out.println("Hello GitHub");
-        System.out.println("Paragraph1");
+		System.out.println("Paragraph1");
+		System.out.println("Paragraph2 w ramach Feature1");
     }
     
 }
