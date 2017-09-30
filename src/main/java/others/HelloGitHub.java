@@ -21,7 +21,7 @@ public class HelloGitHub {
         System.out.println("Junk line 1");
         System.out.println("Junk line 2");
         System.out.println("Junk line 3");
-        System.out.println("Paragraph 3 w ramach Feature2");
+        System.out.println("Paragraph 3 dodany w ramach Feature2");
     }
     
 }
