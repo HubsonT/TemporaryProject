@@ -25,7 +25,6 @@ public class HelloGitHub {
         System.out.println("Paragraph 4 dodany i zmieniony w ramach Feature2");
         System.out.println("Revert line 1");
         System.out.println("Revert line 2");
-        System.out.println("Revert line 3");
     }
     
 }
