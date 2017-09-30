@@ -19,6 +19,7 @@ public class HelloGitHub {
 	System.out.println("Paragraph1");
 	System.out.println("Paragraph2 w ramach Feature1");
         System.out.println("Junk line 1");
+        System.out.println("Junk line 2");
     }
     
 }
