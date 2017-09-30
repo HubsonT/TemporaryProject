@@ -18,7 +18,6 @@ public class HelloGitHub {
         System.out.println("Hello GitHub");
 		System.out.println("Paragraph1");
 		System.out.println("Paragraph2 w ramach Feature1");
-
     }
     
 }
