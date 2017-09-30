@@ -23,7 +23,6 @@ public class HelloGitHub {
         System.out.println("Junk line 3");
         System.out.println("Paragraf 3 dodany");
         System.out.println("Paragraph 4 dodany i zmieniony w ramach Feature2");
-
     }
     
 }
