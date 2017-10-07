@@ -44,7 +44,7 @@ public class MainPerson {
         }
         
         Person.printPersonOlderThan(listaOsob, 22);
-        
+        Person.printPersonsWithinAgeRange(listaOsob, 18, 25);
     }
     
 }
