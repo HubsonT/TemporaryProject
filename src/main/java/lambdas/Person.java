@@ -92,5 +92,15 @@ public class Person {
         }
     }
     
+    public static void printPersons(List<Person> rooster, CheckPerson tester) {
+        System.out.println("Lista osób spełniających określone kryteria");
+        for(Person p: rooster){
+            if (tester.test(p)) {
+                p.printPerson();
+            }
+        }
+    }
+    
+    
     
 }
