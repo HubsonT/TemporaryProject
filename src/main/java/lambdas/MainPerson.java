@@ -45,6 +45,19 @@ public class MainPerson {
         
         Person.printPersonOlderThan(listaOsob, 22);
         Person.printPersonsWithinAgeRange(listaOsob, 18, 25);
+        
+        //Person.printPersons(listaOsob, new CheckPersonEligibleForSelectiveService());
+        
+        //użycie klasy anonimowej
+        
+        Person.printPersons(listaOsob, new CheckPerson() {
+        @Override
+        public boolean test(Person p) {
+            return p.getGender()==Person.Sex.MALE 
+                    && p.getAge()>=18 
+                    && p.getAge()<=25;
+       }
+    });
     }
     
 }
