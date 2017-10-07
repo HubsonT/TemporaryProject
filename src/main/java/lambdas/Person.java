@@ -7,6 +7,7 @@ package lambdas;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.function.Predicate;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
@@ -111,6 +112,15 @@ public class Person {
         for(Person p: rooster) {
             if (tester.test(p)){
                 p.printPerson();
+            }
+        }
+    }
+    //zastosowanie dodatkowego interfejsu funkconalnego Consumer<T> aby zastąpić wywołanie metody printPerson w ciele metody, 
+    //wywołaniem metody printPerson przy wywołaniu metody
+    public static void processPersons(List<Person> rooster, Predicate<Person> tester, Consumer<Person> block) {
+        for (Person p:rooster) {
+            if (tester.test(p)) {
+                block.accept(p);
             }
         }
     }
