@@ -75,10 +75,22 @@ public class Person {
     
     
     public static void printPersonOlderThan(List<Person> roster, int age) {
+        System.out.println("lista osób starszych niż " + age);
         for(Person p: roster) {
             if (p.getAge()> age) {
                 p.printPerson();
             }
         }
     }
+    
+    public static void printPersonsWithinAgeRange(List<Person> roster, int low, int high) {
+        System.out.println("Lista osób starszych niż " + low + " i młodszych niż " + high );
+        for (Person p: roster) {
+            if (p.getAge()>low && p.getAge()<high) {
+                p.printPerson();
+            }
+        }
+    }
+    
+    
 }

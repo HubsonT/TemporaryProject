@@ -43,6 +43,8 @@ public class MainPerson {
             System.out.println(listaOsob.get(i));
         }
         
+        Person.printPersonOlderThan(listaOsob, 22);
+        
     }
     
 }
