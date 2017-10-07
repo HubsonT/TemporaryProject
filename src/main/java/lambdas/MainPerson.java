@@ -53,8 +53,10 @@ public class MainPerson {
 //            }
 //        });
         //zastąpienie klasy anonimowej przez lambdas
-        Person.printPersons(listaOsob,
-                (Person p) -> p.getGender() == Person.Sex.MALE
+        Person.printPersonsWithPredicate(listaOsob,
+                //(Person p) -> p.getGender() == Person.Sex.MALE
+                //powyższą linię można zastąpić poniższą bo jest jeden parametr
+                p-> p.getGender()==Person.Sex.MALE
                 && p.getAge() >= 18
                 && p.getAge() <= 25
         );

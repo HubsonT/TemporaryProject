@@ -9,6 +9,8 @@ package lambdas;
  *
  * @author Hubert
  */
+
+//interfejs jest niepotrzebny po użyciu lambdas Predicate
 public interface CheckPerson {
     boolean test(Person p);
 }

@@ -9,6 +9,9 @@ package lambdas;
  *
  * @author Hubert
  */
+
+
+//klasa jest niepotrzebna po użyciu lambdas 
 public class CheckPersonEligibleForSelectiveService implements CheckPerson {
 
     @Override
