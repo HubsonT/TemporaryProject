@@ -14,7 +14,7 @@ public class Greeter {
 				System.out.println("Hello world");
 			}
 		};
-
+                lambdaGreeting.perform();
 		greeter.greet(lambdaGreeting);
 		greeter.greet(innerClassGreeting);
 	}   
