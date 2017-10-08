@@ -17,6 +17,6 @@ public class Greeter {
 
 		greeter.greet(lambdaGreeting);
 		greeter.greet(innerClassGreeting);
-	}
+	}   
 
 }
