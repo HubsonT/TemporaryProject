@@ -1,4 +1,4 @@
-package io.javabrains.lambdas;
+package io.javabrains.lambdas.unit1;
 
 public class HelloWorldGreeting implements Greeting {
 
