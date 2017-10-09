@@ -9,6 +9,7 @@ import io.javabrains.lambdas.unit1.*;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 /**
@@ -34,27 +35,41 @@ public class StandardFuctionalIntefacesExample {
         Collections.sort(people, (o1, o2) -> o1.getLastName().compareTo(o2.getLastName()));
 
         //Step 2 - stworzenie metody która wydrukuje wszystkie elementy z listy
-        printConditionally(people, o -> true);
+        //printConditionally(people, o -> true);
+        performConditionally(people, o -> true, o -> System.out.println(o));
         
         
         //Step 3 - stworzenie metody która wydrukuje wszystkie osoby których naziwsko zaczyna się na C
 
         System.out.println("People whose last name begins with 'C'");
-        printConditionally(people, o -> o.getLastName().startsWith("C"));
+        //printConditionally(people, o -> o.getLastName().startsWith("C"));
+        performConditionally(people, o -> o.getLastName().startsWith("C"), o -> System.out.println(o));
 
         System.out.println("People whose first name begins with 'C'");
-        printConditionally(people, o -> o.getFirstName().startsWith("C"));
+        //printConditionally(people, o -> o.getFirstName().startsWith("C"));
+        performConditionally(people, o -> o.getFirstName().startsWith("C"), o-> System.out.println(o));
+        //powyzsze oczywiscie możemy sobie zmieniac, bo consumer akceptuje cokolwiek, co zwraca void, czyli mozemy
+        //sobie wydrukowac np. pierwsze imie osob ktorych imie zaczyna sie na C
+        performConditionally(people, o -> o.getFirstName().startsWith("C"), o-> System.out.println(o.getFirstName()));
         
 
     }
 
-    private static void printConditionally(List<Osoba> people, Predicate<Osoba> predicate) {
-
-        for (Osoba o : people) {
+//    private static void printConditionally(List<Osoba> people, Predicate<Osoba> predicate) {
+//
+//        for (Osoba o : people) {
+//            if (predicate.test(o)) {
+//                System.out.println(o);
+//            }
+//        }
+//    }
+//    zmiana metody na pefrormConditionally, która będzie przyjmować jako dodatkowy parametr zachowanie ktore chcemy uzyskac
+    
+    private static void performConditionally(List<Osoba> osoby, Predicate<Osoba> predicate, Consumer<Osoba> consumer) {
+        for(Osoba o: osoby) {
             if (predicate.test(o)) {
-                System.out.println(o);
+                consumer.accept(o);
             }
         }
     }
-
 }
