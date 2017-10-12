@@ -3,14 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package oracle.lambdas;
+package oracle.lambdas2;
 
 /**
  *
  * @author Hubert
  */
-
-//interfejs jest niepotrzebny po użyciu lambdas Predicate
-public interface CheckPerson {
-    boolean test(Person p);
+public enum Gender {
+    MALE,FEMALE
 }
