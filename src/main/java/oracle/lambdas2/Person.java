@@ -1,13 +1,13 @@
-
 package oracle.lambdas2;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Function;
 
 /**
  *
- * @author Hubert
- * na podstawie http://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Lambda-QuickStart/index.html#section1
+ * @author Hubert na podstawie
+ * http://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Lambda-QuickStart/index.html#section1
  */
 public class Person {
 
@@ -111,9 +111,6 @@ public class Person {
     public String getAddress() {
         return address;
     }
-    
-    
-    
 
     @Override
     public String toString() {
@@ -133,6 +130,10 @@ public class Person {
 
     public void printName() {
         System.out.println("Name: " + givenName + " " + surName);
+    }
+
+    public String printCustom(Function<Person, String> f) {
+        return f.apply(this);
     }
 
     public static List<Person> createShortList() {
