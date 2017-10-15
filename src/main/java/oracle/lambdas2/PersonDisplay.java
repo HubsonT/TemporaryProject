@@ -20,10 +20,10 @@ public class PersonDisplay {
     public static void main(String[] args) {
         List<Person> lista = Person.createShortList();
 
-        Function<Person, String> nameAndEmail = (p -> "Name: " + p.getGivenName() + ", email: " + p.getEmail());
-        Function<Person, String> westernStyle = (p -> "Name: " + p.getSurName() + " " + p.getGivenName());
+        Function<Person, String> nameAndEmail = p -> "Name: " + p.getGivenName() + ", email: " + p.getEmail();
+        Function<Person, String> westernStyleName = p -> "Name: " + p.getGivenName() + " " + p.getSurName();
 
-        System.out.println("Custom list of people - name + email");
+        System.out.println("Custom  display - name + email");
 //        for (Person person : lista) {
 //            System.out.println(
 //                    person.printCustom(nameAndEmail)
@@ -31,12 +31,19 @@ public class PersonDisplay {
 //        }
         lista.forEach(p-> System.out.println(p.printCustom(nameAndEmail)));
 
-        System.out.println("list of people - surname + givenname");
+        System.out.println("\nlist of people - surname + givenname");
 //        for(Person person: lista) {
 //            System.out.println(person.printCustom(westernStyle));
 //        }
-        lista.forEach(p -> System.out.println(p.printCustom(westernStyle)));
-
+        lista.forEach(p -> System.out.println(p.printCustom(westernStyleName)));
+        
+//        inny sposob wywolania tego co powyżej
+        System.out.println("\nlist of people - western style");
+        lista.forEach(p-> p.printWesternName());
+         
+        System.out.println("\nlist of people - estern style");
+//        tu uzywamy tzw. method reference, kiedy gotowa metoda jest juz zdefiniowana
+        lista.forEach(Person::printEasternName);
     }
 
 }
